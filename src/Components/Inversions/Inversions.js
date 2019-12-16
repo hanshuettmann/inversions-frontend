@@ -84,10 +84,10 @@ export default class Inversions extends React.Component {
     }
 
     fetchPage(index) {
-        let newState = this.state.inversions;
-        newState.currentPage = index;
+        let updateState = this.state.inversions;
+        updateState.currentPage = index;
         this.setState({
-            inversions: newState
+            inversions: updateState
         }, () => this.fetchInversions());
     }
 
