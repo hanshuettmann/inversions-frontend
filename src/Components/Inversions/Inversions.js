@@ -95,16 +95,18 @@ export default class Inversions extends React.Component {
         return (
             <div>
                 <AmountDisplay testState={(i) => this.testState(i)} />
-                <div className="row justify-content-center">
-                    <Filters handleSelect={(r) => this.dateRange(r)} />
-                    <InversionsTable inversions={this.state.inversions.result} />
-                    <Pagination
-                        currentPage={this.state.inversions.currentPage}
-                        totalPages={this.state.inversions.totalPages}
-                        handlePagination={(index) => this.fetchPage(index)} />
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <Filters handleSelect={(r) => this.dateRange(r)} />
+                        <InversionsTable inversions={this.state.inversions.result} />
+                        <Pagination
+                            currentPage={this.state.inversions.currentPage}
+                            totalPages={this.state.inversions.totalPages}
+                            handlePagination={(index) => this.fetchPage(index)} />
+                    </div>
                 </div>
             </div>
-                );
-            }
-        
+        );
+    }
+
 }

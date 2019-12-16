@@ -18,7 +18,7 @@ export default class Filters extends React.Component {
 
     render() {
         return (
-            <div className="col-3">
+            <div className="col-lg-4 col-md-12">
                 <DateRange
                     onChange={(r) => this.props.handleSelect(r)}
                     calendars={1}

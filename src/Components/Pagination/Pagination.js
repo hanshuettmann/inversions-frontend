@@ -7,7 +7,7 @@ export default class Pagination extends React.Component {
         let currentPage = this.props.currentPage;
         return (
             //<div className="container">
-                <div className="col-4 d-flex justify-content-center">
+                <div className="col-md-12 col-lg-4 d-flex justify-content-center">
                     <nav aria-label="Page navigation example">
                         <ul className="pagination">
                             

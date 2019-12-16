@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function InversionsTable(props) {
     return (
-        <div className="col-9">
+        <div className="col-lg-8 col-md-12">
             <table className="table table-hover">
                 <thead>
                     <tr>

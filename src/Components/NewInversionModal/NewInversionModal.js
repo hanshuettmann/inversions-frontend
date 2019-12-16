@@ -17,7 +17,18 @@ export default class NewInversionModal extends React.Component {
             amount: ''
         }
         this.setState({ inversion: inversion });
-        console.log('negro cagao');
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.balance != this.props.balance) {
+            let inversion = {
+                name: '',
+                amount: ''
+            }
+            this.setState({ inversion: inversion });
+            console.log('genial');
+        }
+        console.log('Nogenial');
     }
 
     handleInputChange(event) {
