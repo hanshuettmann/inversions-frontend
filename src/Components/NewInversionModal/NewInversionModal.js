@@ -11,12 +11,13 @@ export default class NewInversionModal extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let inversion = {
             name: '',
             amount: ''
         }
         this.setState({ inversion: inversion });
+        console.log('negro cagao');
     }
 
     handleInputChange(event) {
