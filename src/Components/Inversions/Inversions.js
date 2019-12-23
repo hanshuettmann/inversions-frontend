@@ -3,6 +3,11 @@ import InversionsTable from '../InversionsTable/InversionsTable';
 import AmountDisplay from '../AmountDisplay/AmountDisplay';
 import Filters from '../Filters/Filters';
 import Pagination from '../Pagination/Pagination';
+import Chart from '../Chart.js/Chart';
+
+const data = {
+
+};
 
 export default class Inversions extends React.Component {
     constructor(props) {
@@ -104,6 +109,15 @@ export default class Inversions extends React.Component {
                             totalPages={this.state.inversions.totalPages}
                             handlePagination={(index) => this.fetchPage(index)} />
                     </div>
+
+                    <Chart
+                        data={this.state.inversions.result.map((item, index) => {
+                            return (item.amount);
+                        })}
+                        labels={this.state.inversions.result.map((item, index) => {
+                            return (item.name);
+                        })} />
+
                 </div>
             </div>
         );
